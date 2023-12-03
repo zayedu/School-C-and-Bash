@@ -1,0 +1,96 @@
+#!/bin/bash
+
+name=$(basename $0)
+
+echo "Major Lab 2: bash script named $name"
+
+echo "Please enter your name"
+
+read username
+
+echo "Hello, $username. Welcome to $name"
+control=1
+
+  if [ $# = 4 ]; then
+    #4 command line arguments 
+
+    if [ -d "A4" ]; then
+      #A4 exists
+      rm -r A4
+      echo "Directory A4 has been deleted"
+
+    else 
+      #A4 does not exist
+      echo "Directory A4 does not exist"
+
+    fi
+
+    while [ $control = 1 ];do
+    echo "The source directory is $1 answer (YES/NO)?"
+
+    read yn
+
+    if [ $yn = "YES" ];then
+      #User inputs yes
+      #breaks going to next step
+      break
+
+    elif [ $yn = "NO" ];then
+      #User inputs NO
+      echo "You requested executed abortion"
+      exit 0
+
+    else
+      #User inputs incorrect 
+      echo "Incorrect response Redo"
+      #returns to beginning of while loop
+    fi
+    done
+  else
+    #incorrect arguments
+    echo "Wrong Number of command line arguments, execution aborted"
+    exit 0
+
+  fi
+
+
+# Next step
+
+while [ $control = 1 ];do
+echo "The destination directories are $2 and $3 (YES/NO)"
+
+read ny 
+
+if [ $ny = "YES" ];then
+# User inputs yes
+      #breaks going to next step
+      break
+elif [ $ny = "NO" ];then
+      #User inputs NO
+      echo "You requested executed abortion"
+      exit 0
+else
+  #User inputs incorrect 
+  echo "Incorrect response, redo"
+  #returns to beginning of while lo
+
+fi
+
+done
+
+echo "Moving files from $1 to $2,$3"
+
+x=`ls $1`
+
+for i in $x; do
+  y=`grep A $1/$i`
+  if [ -z "$y" ]; then
+    #Does not contain A
+    mv $1/$i $3/$i
+
+  else
+    mv $1/$i $2/$i
+  fi
+
+
+done

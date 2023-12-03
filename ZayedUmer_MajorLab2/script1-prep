@@ -1,0 +1,24 @@
+#!/bin/bash
+name=$(basename $0)
+
+echo -e "Major Lab 2: Bash script named $name"
+
+echo -e "$(date +"%Y-%m-%d %H:%M:%S")"
+
+mkdir A1
+mkdir A2
+mkdir A3
+mkdir A4
+
+cd A1
+
+echo "Please give me a 100% on this lab">file1
+echo "I love 2xc3" >file2
+echo "THANK YOU SIR">file3
+
+cd ..
+cd A4
+echo "Please give me a 101% on this lab" > file4
+echo "You are the best TA Sir" > file5
+
+

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+name=$(basename $0)
+dtm=($(date +"%Y-%m-%d %H:%M:%S"))
+os=$(uname -a)
+
+echo -e "($(date +"%Y-%m-%d %H:%M:%S"))"
+echo -e "$name: Operating System is $os"
+
+echo -e "Major lab 1: bash script named $name"
+
+if [ $# = 1 ]; then
+#Arguments=1
+  if [ $1 = "User1" ] || [ $1 = "User2" ] || [ $1 = "User3" ] || [ $1 = "User4" ];then
+  #IS one of the users
+  echo -e "$name: $1's welcome"
+
+    echo "#include <stdio.h>
+  int main() {
+  printf(\"Hello $1, you are now part of the team \n\");
+  return 0;
+  }" > welcome.c
+
+  gcc -o welcome welcome.c
+./welcome
+  else
+  #Not one of the users
+
+  echo -e "$name: no applicable name supplied"
+  fi
+
+
+else
+#Arguments are not 1
+
+echo -e "$name: wrong number of command line arguments"
+echo -e "usage --  $name William"
+fi

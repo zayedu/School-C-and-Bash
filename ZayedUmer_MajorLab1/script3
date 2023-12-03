@@ -1,0 +1,4 @@
+#!/bin/bash
+#"https://raw.githubusercontent.com/ayazdine/2xc3/main/Binary"
+
+curl "https://raw.githubusercontent.com/ayazdine/2xc3/main/Binary"
