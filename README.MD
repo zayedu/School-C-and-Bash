@@ -1,4 +1,4 @@
-# McMaster SFWRENG 2XC3 Course Repository
+# McMaster University SFWRENG 2XC3 Course Repository
 
 This repository serves as a collection of code written in C, Bash, and Makefile for assignments completed during McMaster University's SFWRENG 2XC3 course.
 
