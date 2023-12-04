@@ -1,10 +1,10 @@
-# McMaster University SFWRENG 2XC3 Course Repository
+# Course Repository
 
 This repository serves as a collection of code written in C, Bash, and Makefile for assignments completed during McMaster University's SFWRENG 2XC3 course.
 
 ## Overview
 
-This repository contains my coursework for the SFWRENG 2XC3 course at McMaster University. It encompasses assignments covering various topics in programming languages such as C, scripting in Bash, and managing builds using Makefile.
+This repository contains my coursework for the course at McMaster University. It encompasses assignments covering various topics in programming languages such as C, scripting in Bash, and managing builds using Makefile.
 
 Feel free to explore the code and assignments. For specific details about each assignment or the coursework, please refer to the respective folders.
 
